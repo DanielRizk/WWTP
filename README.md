@@ -1,4 +1,14 @@
-### Setup Instructions
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Python**: The project is developed with Python. You must have Python installed to run the Python scripts. Visit [Python's official site](https://www.python.org/downloads/) for installation instructions.
+
+- **Docker**: Docker is used for building and running the application in an isolated environment. Download and install Docker from [Docker's official site](https://www.docker.com/get-started).
+
+- **Docker Compose**: This tool is used for defining and running multi-container Docker applications. After installing Docker, you can install Docker Compose by following the instructions on the [official Docker Compose page](https://docs.docker.com/compose/install/).
+
+## Installation
 
 1. **Clone the Repository**
    ```sh
@@ -10,9 +20,12 @@
 3. **Run the Initialization Script**
    ```sh
    ./init_data.sh
-4. **Build Docker Images**
+
+## Usage
+
+1. **Build Docker Images**
    ```sh
    docker-compose build
-5. **Deploy the Containers**
+2. **Deploy the Containers**
    ```sh
    docker-compose up -d
