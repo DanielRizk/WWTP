@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  flask_server:
+    build: ./Server
+    container_name: flask_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Server:/app
+    environment:
+      - FLASK_ENV=development
+
+  node_red:
+    image: nodered/node-red:latest
+    container_name: node_red
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node-red/data:/data
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_config:/mosquitto/config
+      - mosquitto_log:/mosquitto/log
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=idacidac
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=idac
+      - DOCKER_INFLUXDB_INIT_PASSWORD=idacidac
+      - DOCKER_INFLUXDB_INIT_ORG=org
+      - DOCKER_INFLUXDB_INIT_BUCKET=Plant
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+
+volumes:
+  mosquitto_data:
+  mosquitto_config:
+  mosquitto_log:
+  influxdb_data:

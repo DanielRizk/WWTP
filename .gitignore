@@ -1,0 +1,20 @@
+# Ignore Python virtual environments
+venv/
+__pycache__/
+
+# Ignore Node-RED and Grafana runtime data
+node-red/data/
+grafana/data/
+
+# Ignore other system files
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store

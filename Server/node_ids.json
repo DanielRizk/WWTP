@@ -1,0 +1,32 @@
+{
+    "Node_01": {
+        "available": false,
+        "timestamp": "28/07/2024-15:22",
+        "uuid": "187ab823-1090-477e-b0b7-2d66d3a0ea2c"
+    },
+    "Node_02": {
+        "available": true,
+        "timestamp": "26/06/2024-16:17",
+        "uuid": "xxx"
+    },
+    "Node_03": {
+        "available": true,
+        "timestamp": "05/05/2024-16:03",
+        "uuid": "xxx"
+    },
+    "Node_04": {
+        "available": true,
+        "timestamp": "09/05/2024-16:03",
+        "uuid": "xxx"
+    },
+    "Node_05": {
+        "available": true,
+        "timestamp": "09/05/2024-16:05",
+        "uuid": "xxx"
+    },
+    "Node_06": {
+        "available": true,
+        "timestamp": "09/05/2024-16:08",
+        "uuid": "xxx"
+    }
+}
