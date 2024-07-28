@@ -1,0 +1,641 @@
+[
+    {
+        "id": "ee43e1a84597e47d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "87c05dee56121eb6",
+        "type": "group",
+        "z": "ee43e1a84597e47d",
+        "name": "Control",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "222d9512766b45cb",
+            "f4902ce172746098",
+            "93667f7f4827253d",
+            "1eefa61d2eea555f",
+            "0a6e2c714d132f65",
+            "6d27db505005a6fb",
+            "fa72f225450f8cb8",
+            "8e69e52716bc78d9",
+            "79b281f98f561672",
+            "514a5ce7be8b2f62",
+            "4748277bc65179c6"
+        ],
+        "x": 394,
+        "y": 459,
+        "w": 692,
+        "h": 402
+    },
+    {
+        "id": "c6f376958f1ee624",
+        "type": "group",
+        "z": "ee43e1a84597e47d",
+        "name": "Re-routing",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a0427c6f4add0294",
+            "fbf97b5561638ff6",
+            "8bf9ff24b8033574",
+            "a0444e069fec6b1b",
+            "2d415a81dc3bb45b",
+            "08bb190b4671c124",
+            "3493f3c5fbd97fec"
+        ],
+        "x": 394,
+        "y": 239,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "1594d4d3b22f2d8f",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "NODE1",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": "10",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "c00a0424d610cf89",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "025e71908f1bcb79",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3b050052e0a9affc",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c00a0424d610cf89",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e6644edd4b03318d",
+        "type": "mqtt-broker",
+        "name": "IDAC",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "70eb746757d13a79",
+        "type": "mqtt-broker",
+        "name": "HOME",
+        "broker": "192.168.0.104",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a0427c6f4add0294",
+        "type": "http in",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "Request ID",
+        "url": "/request_id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "fbf97b5561638ff6"
+            ]
+        ]
+    },
+    {
+        "id": "fbf97b5561638ff6",
+        "type": "http request",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/request_id",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 340,
+        "wires": [
+            [
+                "8bf9ff24b8033574"
+            ]
+        ]
+    },
+    {
+        "id": "8bf9ff24b8033574",
+        "type": "http response",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "return ID",
+        "statusCode": "",
+        "headers": {},
+        "x": 1000,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "222d9512766b45cb",
+        "type": "mqtt out",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "Control",
+        "topic": "control",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e6644edd4b03318d",
+        "x": 960,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f4902ce172746098",
+        "type": "http in",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "one-off measurment",
+        "url": "/control/one-off",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 510,
+        "y": 520,
+        "wires": [
+            [
+                "1eefa61d2eea555f",
+                "93667f7f4827253d",
+                "e53cdca2a517ef0c"
+            ]
+        ]
+    },
+    {
+        "id": "93667f7f4827253d",
+        "type": "http response",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1eefa61d2eea555f",
+        "type": "function",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "one-off control",
+        "func": "var data = msg.payload;\nmsg.payload = data;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 560,
+        "wires": [
+            [
+                "222d9512766b45cb",
+                "4748277bc65179c6"
+            ]
+        ]
+    },
+    {
+        "id": "0a6e2c714d132f65",
+        "type": "http in",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "set interval for measuring",
+        "url": "/control/set_measure_int",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [
+                "6d27db505005a6fb",
+                "fa72f225450f8cb8",
+                "e53cdca2a517ef0c"
+            ]
+        ]
+    },
+    {
+        "id": "6d27db505005a6fb",
+        "type": "http response",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "fa72f225450f8cb8",
+        "type": "function",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "measuring loop",
+        "func": "// Retrieve the existing timeout reference, if any\nvar currentTimeout = context.get('currentTimeout') || null;\n\n// Function to send a message to MQTT\nfunction sendMQTT() {\n    node.send({ payload: JSON.stringify({Node_ID: \"all\", Cmd: \"1\"}) });\n}\n\n// Function to start or restart the looping mechanism\nfunction startLooping(delay) {\n    // Clear the existing timeout if there is one\n    if (currentTimeout) {\n        clearTimeout(currentTimeout);\n    }\n\n    // Start a new timeout with the provided delay\n    currentTimeout = setTimeout(function() {\n        sendMQTT();          // Send the MQTT message\n        startLooping(delay); // Restart the loop with the same delay\n    }, delay);\n\n    // Store the timeout reference in the context\n    context.set('currentTimeout', currentTimeout);\n}\n\n// Check if msg.payload is a string and parse it\nif (typeof msg.payload === 'string') {\n    try {\n        msg.payload = JSON.parse(msg.payload);\n    } catch (e) {\n        node.error(\"Failed to parse payload as JSON\", msg);\n        return null;\n    }\n}\n\n// Check if the incoming message contains a JSON object with a valid integer for delay\nif (msg.payload && typeof msg.payload === 'object' && typeof msg.payload.int === 'number') {\n    // Update the delay and restart the looping with new delay\n    startLooping(msg.payload.int * 1000); // multiply by 1000 to convert seconds to milliseconds\n} else {\n    // Send warning message to debug node\n    node.warn(\"Invalid input: expecting a JSON object with an 'int' property\");\n}\n\n// Return null to prevent the message from being forwarded automatically\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 820,
+        "wires": [
+            [
+                "222d9512766b45cb",
+                "4748277bc65179c6"
+            ]
+        ]
+    },
+    {
+        "id": "8e69e52716bc78d9",
+        "type": "http in",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "set interval for sending",
+        "url": "/control/set_send_int",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 520,
+        "y": 660,
+        "wires": [
+            [
+                "79b281f98f561672",
+                "514a5ce7be8b2f62",
+                "e53cdca2a517ef0c"
+            ]
+        ]
+    },
+    {
+        "id": "79b281f98f561672",
+        "type": "http response",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "514a5ce7be8b2f62",
+        "type": "function",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "sending loop",
+        "func": "// Retrieve the existing timeout reference, if any\nvar currentTimeout = context.get('currentTimeout') || null;\n\n// Function to send a message to MQTT\nfunction sendMQTT() {\n    node.send({ payload: JSON.stringify({Node_ID: \"all\", Cmd: \"2\"}) });\n}\n\n// Function to start or restart the looping mechanism\nfunction startLooping(delay) {\n    // Clear the existing timeout if there is one\n    if (currentTimeout) {\n        clearTimeout(currentTimeout);\n    }\n\n    // Start a new timeout with the provided delay\n    currentTimeout = setTimeout(function() {\n        sendMQTT();          // Send the MQTT message\n        startLooping(delay); // Restart the loop with the same delay\n    }, delay);\n\n    // Store the timeout reference in the context\n    context.set('currentTimeout', currentTimeout);\n}\n\n// Check if msg.payload is a string and parse it\nif (typeof msg.payload === 'string') {\n    try {\n        msg.payload = JSON.parse(msg.payload);\n    } catch (e) {\n        node.error(\"Failed to parse payload as JSON\", msg);\n        return null;\n    }\n}\n\n// Check if the incoming message contains a JSON object with a valid integer for delay\nif (msg.payload && typeof msg.payload === 'object' && typeof msg.payload.int === 'number') {\n    // Update the delay and restart the looping with new delay\n    startLooping(msg.payload.int * 1000); // multiply by 1000 to convert seconds to milliseconds\n} else {\n    // Send warning message to debug node\n    node.warn(\"Invalid input: expecting a JSON object with an 'int' property\");\n}\n\n// Return null to prevent the message from being forwarded automatically\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "222d9512766b45cb",
+                "4748277bc65179c6"
+            ]
+        ]
+    },
+    {
+        "id": "a0444e069fec6b1b",
+        "type": "mqtt in",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "node feedback",
+        "topic": "node_feedback",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "e6644edd4b03318d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "2d415a81dc3bb45b",
+                "fbef9de24c1ed9a5"
+            ]
+        ]
+    },
+    {
+        "id": "2d415a81dc3bb45b",
+        "type": "function",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "parse feedback msg",
+        "func": "// Create a new object with the required structure\nvar formattedPayload = {\n    node_id: msg.payload  // Trim any whitespace from the payload\n};\n\n// Set the new JSON object as the payload for the HTTP request\nmsg.payload = JSON.stringify(formattedPayload);\n\n// Pass the message to the next node\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 280,
+        "wires": [
+            [
+                "08bb190b4671c124"
+            ]
+        ]
+    },
+    {
+        "id": "08bb190b4671c124",
+        "type": "http request",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:5000/node_feedback",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "3493f3c5fbd97fec",
+                "5b82eb59759da8c2"
+            ]
+        ]
+    },
+    {
+        "id": "3493f3c5fbd97fec",
+        "type": "http response",
+        "z": "ee43e1a84597e47d",
+        "g": "c6f376958f1ee624",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1040,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fbef9de24c1ed9a5",
+        "type": "debug",
+        "z": "ee43e1a84597e47d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4748277bc65179c6",
+        "type": "debug",
+        "z": "ee43e1a84597e47d",
+        "g": "87c05dee56121eb6",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "5b82eb59759da8c2",
+        "type": "debug",
+        "z": "ee43e1a84597e47d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e53cdca2a517ef0c",
+        "type": "debug",
+        "z": "ee43e1a84597e47d",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    }
+]
