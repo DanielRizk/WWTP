@@ -29,16 +29,6 @@ Before you begin, ensure you have met the following requirements:
    ```sh
    git clone https://github.com/DanielRizk/WWTP.git
    cd WWTP
-2. **Make node-red and grafana directories**
-   ```sh
-   mkdir node-red
-   mkdir node-red/data
-   mkdir grafana
-   mkdir grafana/data
-3. **Create virtual env**
-   ```sh
-   cd Server
-   python3 -m venv venv
 2. **Make init_data.sh Executable**
    ```sh
    sudo chmod +x init_data.sh
