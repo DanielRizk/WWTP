@@ -7,8 +7,6 @@ Before you begin, ensure you have met the following requirements:
 - **Pip**: Install pip if not installed
    ```sh
    sudo apt install python3-pip
-   ```sh
-   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
    
 - **build-essential**: Install build-essential and other required packages:
    ```sh
